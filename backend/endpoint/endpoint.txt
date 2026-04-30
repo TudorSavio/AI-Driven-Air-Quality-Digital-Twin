@@ -1,0 +1,20 @@
+| Method  | Endpoint                              | Description                    |
+| ------- | ------------------------------------- | ------------------------------ |
+| **GET** | `/ai/prediction/:type`                | Prediksi 24 jam                |
+| **GET** | `/ai/prediction-range/:type?hours=48` | Prediksi custom (1–240 jam)    |
+| **GET** | `/ai/prediction-today/:type`          | Prediksi untuk hari ini        |
+| **GET** | `/ai/prediction-7days/:type`          | Prediksi 7 hari ke depan       |
+| **GET** | `/ai/prediction-history/:type`        | Ambil riwayat prediksi dari DB |
+
+
+history 24jam
+GET http://localhost:5000/api/history/temperature?hours=24
+GET http://localhost:5000/api/history/humidity?hours=24
+GET http://localhost:5000/api/history/tvoc?hours=24
+
+History 7 hari (168 jam)
+GET http://localhost:5000/api/history/temperature?hours=168
+
+History default (24 jam)
+GET http://localhost:5000/api/history/eco2
+

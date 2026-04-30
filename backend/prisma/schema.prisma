@@ -1,0 +1,43 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Actual {
+  id          Int      @id @default(autoincrement())
+  ts          DateTime
+  deviceId    String
+
+  temperature Float
+  humidity    Float
+  tvoc        Int
+  eco2        Int
+  dust        Float
+  aqi         Float?
+
+  createdAt   DateTime @default(now())
+
+  @@index([deviceId, ts])
+}
+
+
+model Prediction {
+  id           Int      @id @default(autoincrement())
+
+  deviceId     String
+  timestamp    DateTime        
+  generatedAt  DateTime @default(now())
+
+  forecastJson Json            
+  metaJson     Json?           
+
+  modelVersion String
+
+  createdAt    DateTime @default(now())
+
+  @@index([deviceId, timestamp])
+}
