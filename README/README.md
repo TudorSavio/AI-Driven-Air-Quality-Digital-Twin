@@ -1,6 +1,9 @@
-# 🌫️ Air Quality Monitoring System
+# 🌫️ AI-Driven Digital Twin Framework for Real-Time Urban Air Quality Forecasting
+**Developer:** TUDOR SAVIO  
+**Institution:** St. Joseph’s College of Engineering, Chennai  
+**Department:** Electronics and Communication Engineering (ECE)  
 
-**Air Quality Monitoring System** is designed to monitor air quality in real time using an **ESP32** microcontroller and key sensors such as **ENS160**, **SHT31**, and **GP2Y1010AU0F**, with live data displayed on an **ILI9431 TFT screen**.
+---
 
 ---
 
@@ -164,4 +167,8 @@ VITE_MQTT_DEBUG=
 
 ## ⭐ Support
 
-If you find this project helpful, please consider giving it a ⭐ on GitHub to support further development!
+---
+## 🎓 Project Context
+This project was developed as a technical mini-project at **St. Joseph’s College of Engineering**. 
+It demonstrates the integration of IoT hardware (ESP32), Cloud Infrastructure (MQTT/Node.js), 
+and Machine Learning (XGBoost) to create a functional Digital Twin for environmental monitoring.
